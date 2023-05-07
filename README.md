@@ -1,6 +1,6 @@
-# AI Generated Poem
+# AI Generated Poem (WIP)
 
-This is a code repository for the [@aigeneratedpoem](https://twitter.com/aigeneratedpoem) Twitter account.
+This is a code repository for the [@aigeneratedpoem](https://twitter.com/aigeneratedpoem) Twitter account. Made by [@joshterrill](https://twitter.com/joshterrill)
 
 ### How it works
 
