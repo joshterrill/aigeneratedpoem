@@ -1,0 +1,40 @@
+{
+  "name": "aigeneratedpoem",
+  "description": "The code repository for the https://twitter.com/aigeneratedpoem Twitter account.",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+      "type": "git",
+      "url": "git+https://github.com/joshterrill/aigeneratedpoem.git"
+    },
+    "keywords": [
+        "poem",
+        "poetry",
+        "AI generated",
+        "generated art",
+        "art",
+        "bot",
+        "chatgpt",
+        "midjourney"
+    ],
+    "author": "Josh Terrill",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/joshterrill/aigeneratedpoem/issues"
+    },
+    "homepage": "https://github.com/joshterrill/aigeneratedpoem#readme",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "node-cron": "^3.0.2",
+        "openai": "^3.2.1",
+        "twitter-api-v2": "^1.14.2"
+    },
+    "devDependencies": {}
+}
