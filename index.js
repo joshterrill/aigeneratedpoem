@@ -69,14 +69,14 @@ async function generatePoem(topic) {
         console.log(`Creating a ${poemVibe} ${poemType} poem that invokes a "${topic}" feeling...`);
         const masterPromptResponse = await openai.createChatCompletion({
             model: process.env.OPENAI_COMPLETION_MODEL,
-            messages: [{ role: 'user', 'content': `Create a short ${poemVibe} ${poemType} poem that invokes a "${topic}" feeling. On the first line, write the following title in all capitals: "Topic: ${topic.toUpperCase()}". The output should not go over 220 characters.` }],
+            messages: [{ role: 'user', 'content': `Create a short ${poemVibe} ${poemType} poem that invokes a "${topic}" feeling. On the first line, write the following title in all capitals wrapped in quotes, i.e.: "${topic.toUpperCase()}". The output should not go over 220 characters.` }],
             // max_tokens: +process.env.OPENAI_MAX_TOKENS,
-            temperature: +process.env.OPENAI_TEMPERATURE || 0,
+            temperature: +process.env.OPENAI_TEMPERATURE || 1,
         });
         const poem = masterPromptResponse.data.choices[0].message.content + '\n#aigenerated';
         return poem;
     } catch (error) {
-        console.log(`Error - generatePoem("${suggestion}"): `, error);
+        console.log(`Error - generatePoem("${topic}"): `, error);
         throw error;
     }
 }
